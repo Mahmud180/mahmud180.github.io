@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Native Android live-streaming app">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1522"/><stop offset="1" stop-color="#0a0e17"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg2)"/>
+  <g stroke="#1f2c44" stroke-width="1" opacity="0.4">
+    <path d="M0 90 H640 M0 180 H640 M0 270 H640 M160 0 V360 M320 0 V360 M480 0 V360"/>
+  </g>
+  <!-- phone -->
+  <rect x="266" y="66" width="108" height="216" rx="18" fill="#121a2b" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="280" y="92" width="80" height="150" rx="6" fill="#0a0e17" stroke="#1f2c44"/>
+  <circle cx="320" cy="262" r="7" fill="none" stroke="#8b9bb4" stroke-width="2"/>
+  <!-- play triangle -->
+  <path d="M308 150 L344 168 L308 186 Z" fill="#f043a8"/>
+  <!-- streaming arcs -->
+  <g fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round">
+    <path d="M410 150 q40 18 0 60" opacity="0.9"/>
+    <path d="M440 132 q66 30 0 96" opacity="0.6"/>
+    <path d="M230 150 q-40 18 0 60" opacity="0.9"/>
+    <path d="M200 132 q-66 30 0 96" opacity="0.6"/>
+  </g>
+  <text x="320" y="322" text-anchor="middle" font-family="monospace" font-size="13" fill="#8b9bb4">Android · RTMP/SRT · AES-256-GCM</text>
+</svg>

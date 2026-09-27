@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Deepfake detection neural network">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1522"/><stop offset="1" stop-color="#0a0e17"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg3)"/>
+  <g stroke="#1f2c44" stroke-width="1" opacity="0.4">
+    <path d="M0 90 H640 M0 180 H640 M0 270 H640 M160 0 V360 M320 0 V360 M480 0 V360"/>
+  </g>
+  <!-- edges -->
+  <g stroke="#22d3ee" stroke-width="1.2" opacity="0.35">
+    <path d="M110 110 L300 90 M110 110 L300 180 M110 110 L300 270
+             M110 180 L300 90 M110 180 L300 180 M110 180 L300 270
+             M110 250 L300 90 M110 250 L300 180 M110 250 L300 270
+             M300 90 L520 140 M300 90 L520 220 M300 180 L520 140
+             M300 180 L520 220 M300 270 L520 140 M300 270 L520 220"/>
+  </g>
+  <!-- nodes -->
+  <g fill="#0a0e17" stroke="#22d3ee" stroke-width="2">
+    <circle cx="110" cy="110" r="12"/><circle cx="110" cy="180" r="12"/><circle cx="110" cy="250" r="12"/>
+    <circle cx="300" cy="90" r="13"/><circle cx="300" cy="180" r="13"/><circle cx="300" cy="270" r="13"/>
+  </g>
+  <g fill="#f043a8" stroke="#f043a8" stroke-width="2">
+    <circle cx="520" cy="140" r="13"/><circle cx="520" cy="220" r="13"/>
+  </g>
+  <text x="48" y="330" font-family="monospace" font-size="13" fill="#8b9bb4">CNN (VGG16) + Bi-LSTM · 0.9925 AUC</text>
+</svg>

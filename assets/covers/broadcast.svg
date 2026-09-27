@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Live broadcast infrastructure">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1522"/><stop offset="1" stop-color="#0a0e17"/>
+    </linearGradient>
+    <linearGradient id="ln1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#f043a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg1)"/>
+  <g stroke="#1f2c44" stroke-width="1" opacity="0.5">
+    <path d="M0 90 H640 M0 180 H640 M0 270 H640 M160 0 V360 M320 0 V360 M480 0 V360"/>
+  </g>
+  <!-- feed tiles -->
+  <g fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.85">
+    <rect x="48" y="70" width="150" height="86" rx="8"/>
+    <rect x="222" y="70" width="150" height="86" rx="8"/>
+    <rect x="396" y="70" width="150" height="86" rx="8"/>
+  </g>
+  <g fill="#22d3ee" opacity="0.18">
+    <rect x="48" y="70" width="150" height="86" rx="8"/>
+    <rect x="396" y="70" width="150" height="86" rx="8"/>
+  </g>
+  <g fill="#f043a8" opacity="0.18"><rect x="222" y="70" width="150" height="86" rx="8"/></g>
+  <!-- LIVE dot -->
+  <circle cx="70" cy="92" r="6" fill="#f043a8"/>
+  <text x="86" y="97" font-family="monospace" font-size="14" fill="#e6ecf5">LIVE</text>
+  <!-- signal waveform -->
+  <path d="M40 250 q30 -55 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0"
+        fill="none" stroke="url(#ln1)" stroke-width="3"/>
+  <path d="M40 290 q30 -30 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0"
+        fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.5"/>
+  <text x="48" y="330" font-family="monospace" font-size="13" fill="#8b9bb4">RTMP / SRT · 62 concurrent feeds</text>
+</svg>

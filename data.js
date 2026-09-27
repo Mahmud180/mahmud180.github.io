@@ -9,12 +9,39 @@ const PROFILE = {
   role: "Broadcast & Live-Production Lead / IT & Technical Operations",
   location: "Dhaka, Bangladesh",
   photo: "assets/profile.jpeg",
+  cv: "assets/Mahmud_Hasan_Shawon_CV.pdf",
   tagline: "5+ years running live esports broadcasts end to end — 50+ concurrent feeds, low-latency streaming infrastructure, and the systems that keep them online.",
   stats: [
-    { num: 50, plus: true, label: "Concurrent feeds" },
-    { num: 62, plus: false, label: "Player streams live" },
-    { num: 5, plus: true, label: "Years in production" }
+    { num: 5, plus: true, label: "Years in live production" },
+    { num: 7, plus: false, label: "Major tournaments broadcast" },
+    { num: 20, plus: true, label: "Minor tournaments & events" },
+    { num: 62, plus: false, label: "Peak player feeds, one event" }
   ]
+};
+
+// What I do — three core disciplines (home page).
+const PILLARS = [
+  {
+    title: "Live Broadcast Production",
+    desc: "Directing multi-source esports and tournament broadcasts from ingest to air with vMix and OBS — coordinating crews, casters, and multi-platform delivery under live pressure.",
+    tags: ["vMix", "OBS", "Multi-source switching"]
+  },
+  {
+    title: "Streaming Infrastructure",
+    desc: "Building and running the streaming backbone: large-scale RTMP/SRT ingestion, SRS streaming servers, and low-latency pipelines kept stable on Linux VPS during high-stakes events.",
+    tags: ["RTMP / SRT", "SRS", "Linux VPS"]
+  },
+  {
+    title: "Software & Data",
+    desc: "Developing web applications and turning gaming API data into real-time broadcast dashboards — with a Computer Science background spanning full-stack development and machine-learning research.",
+    tags: ["ASP.NET Core", "Next.js", "MS SQL", "Python"]
+  }
+];
+
+// Credibility strip — where the work has happened. Truthful only.
+const TRUSTED = {
+  orgs: ["GOAT Esports", "WarCities", "F10 Solutions"],
+  tournaments: ["PMNC South Asia", "PMNC Bangladesh"]
 };
 
 // Every link — embedded across the site.
@@ -126,7 +153,7 @@ const PROJECTS = [
     title: "GOAT Esports — Tournament Broadcasting System",
     tag: "Live Infrastructure",
     short: "Streaming infrastructure for live esports tournaments — 62 concurrent players on an SRS server, with a role-based dual-dashboard monitoring system.",
-    img: "",
+    img: "assets/covers/broadcast.svg",
     overview: "The production backbone behind GOAT Esports tournament broadcasts: the ingest, monitoring, and control layer that keeps dozens of live player feeds stable and on air.",
     role: "Broadcast & Streaming Operations Lead",
     dates: "2025 – Present",
@@ -145,7 +172,7 @@ const PROJECTS = [
     title: "GOAT Live — Android Live Streaming App",
     tag: "Mobile / Streaming",
     short: "A production-grade native Android app that streams over RTMP/SRT for competitive esports, with encrypted credentials and an authenticated backend.",
-    img: "",
+    img: "assets/covers/android.svg",
     overview: "A native Android application that lets the production team push live streams from a mobile device straight into the tournament pipeline.",
     role: "Developer",
     dates: "2025",
@@ -164,7 +191,7 @@ const PROJECTS = [
     title: "DeepGuard — Deepfake Detection System",
     tag: "Machine Learning / Research",
     short: "A hybrid CNN + Bi-LSTM model for detecting deepfake video — 95.67% accuracy and 0.9925 AUC — and the basis of an IEEE-published paper.",
-    img: "",
+    img: "assets/covers/ml.svg",
     overview: "My CSE thesis and IEEE research: a deep-learning system that tells real video from AI-manipulated video by reading both what a frame looks like and how it changes over time.",
     role: "Researcher & Developer",
     dates: "2025 – 2026",

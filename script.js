@@ -20,11 +20,31 @@ document.addEventListener("DOMContentLoaded", () => {
     $$(".stat__num", hero).forEach(s => so.observe(s));
   }
 
+  // ---- Trusted / worked-with strip (home) ----
+  const trust = $("#trust-orgs");
+  if (trust && typeof TRUSTED !== "undefined") {
+    const all = [...TRUSTED.orgs, ...TRUSTED.tournaments];
+    trust.innerHTML = all.map(o => `<span class="trust__item">${esc(o)}</span>`).join("");
+  }
+
+  // ---- What I do pillars (home) ----
+  const pillars = $("#pillars-grid");
+  if (pillars && typeof PILLARS !== "undefined") {
+    pillars.innerHTML = PILLARS.map(p => `
+      <article class="pillar reveal">
+        <h3 class="pillar__title">${esc(p.title)}</h3>
+        <p class="pillar__desc">${esc(p.desc)}</p>
+        <div class="pillar__tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+      </article>`).join("");
+    $$(".reveal", pillars).forEach(reveal);
+  }
+
   // ---- Featured projects (home) ----
   const feat = $("#featured-projects");
   if (feat) {
     feat.innerHTML = PROJECTS.map(p => `
       <a class="proj reveal" href="project.html?p=${p.slug}">
+        ${p.img ? `<span class="proj__cover"><img src="${p.img}" alt="" loading="lazy"></span>` : ""}
         <span class="proj__tag">${p.tag}</span>
         <h3 class="proj__title">${esc(p.title)}</h3>
         <p class="proj__desc">${esc(p.short)}</p>
@@ -96,7 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const tours = $("#tournaments");
   if (tours) {
     tours.innerHTML = TOURNAMENTS.map(t =>
-      `<div class="tour reveal"><span class="tour__name">${esc(t.name)}</span><span class="tour__role">${esc(t.role)}</span></div>`).join("");
+      `<div class="tour reveal"><span class="tour__name">${esc(t.name)}</span><span class="tour__role">${esc(t.role)}</span></div>`).join("")
+      + '<p class="muted-note">7 major and 20+ minor tournaments broadcast to date — selected flagship series shown.</p>';
     $$(".reveal", tours).forEach(reveal);
   }
 
@@ -105,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (grid) {
     grid.innerHTML = PROJECTS.map(p => `
       <a class="proj reveal" href="project.html?p=${p.slug}">
+        ${p.img ? `<span class="proj__cover"><img src="${p.img}" alt="" loading="lazy"></span>` : ""}
         <span class="proj__tag">${p.tag}</span>
         <h3 class="proj__title">${esc(p.title)}</h3>
         <p class="proj__desc">${esc(p.short)}</p>
